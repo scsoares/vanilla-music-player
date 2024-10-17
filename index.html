@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah's Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Contenedor geral de la página -->
+    <div id="all" class="container">
+        <!-- Título para la página -->
+        <h1>Sarah's Player</h1>
+
+        <!-- Contenedor general para el player, que se quedará centralizado en la página -->
+        <div id="player" class="container">
+
+            <!-- Contenedor para la portada del álbum y la barra de progreso -->
+            <div id="album-and-bar">
+                <div id="cover" class="container">
+                </div>
+
+                <!-- subcontenedor para los detalles de la canción -->
+                <div id="song-details" class="container">
+                    <p id="artist">placeholder</p>
+                    <p id="name">placeholder</p>
+                </div>
+            </div>
+
+
+            <!-- Contenedor de los botones de próximo, anterior, pause, play -->
+            <div id="controls" class="container">
+
+                <!-- Botón de anterior -->
+                <button id="previous" class="change">
+                    <svg width="70%" height="70%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z"
+                            fill="#fff" />
+                    </svg>
+                </button>
+
+
+                <!-- Contenedor para los botones de pause y play -->
+                <div id="pause-or-play">
+
+                    <!-- pause -->
+                    <button id="pause" class="btn"><svg fill="#fff" height="70%" width="70%" version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 512 512" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M256,0C114.842,0,0,114.842,0,256s114.842,256,256,256s256-114.842,256-256S397.158,0,256,0z M256,465.455
+                                    			c-115.493,0-209.455-93.961-209.455-209.455S140.507,46.545,256,46.545S465.455,140.507,465.455,256S371.493,465.455,256,465.455z
+                                    			" />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M318.061,139.636c-12.853,0-23.273,10.42-23.273,23.273v186.182c0,12.853,10.42,23.273,23.273,23.273
+                                    			c12.853,0,23.273-10.42,23.273-23.273V162.909C341.333,150.056,330.913,139.636,318.061,139.636z" />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path
+                                        d="M193.939,139.636c-12.853,0-23.273,10.42-23.273,23.273v186.182c0,12.853,10.42,23.273,23.273,23.273
+                                    			c12.853,0,23.273-10.42,23.273-23.273V162.909C217.212,150.056,206.792,139.636,193.939,139.636z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+
+                    <!-- play -->
+                    <button id="play" class="btn active"><svg fill="#fff" height="70%" width="70%" version="1.1"
+                            id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 512 512" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M383.147,236.268l-167.564-104.73c-7.174-4.485-16.216-4.721-23.617-0.621c-7.399,4.102-11.99,11.895-11.99,20.356
+                                    			v209.455c0,8.46,4.591,16.254,11.99,20.356c3.516,1.949,7.401,2.917,11.281,2.917c4.287,0,8.569-1.184,12.335-3.537
+                                    			L383.146,275.74c6.805-4.253,10.938-11.711,10.938-19.735C394.085,247.979,389.952,240.52,383.147,236.268z M226.521,318.737
+                                    			V193.263l100.38,62.739L226.521,318.737z" />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <path d="M256,0C114.842,0,0,114.842,0,256s114.842,256,256,256s256-114.842,256-256S397.158,0,256,0z M256,465.455
+                                    			c-115.495,0-209.455-93.961-209.455-209.455S140.505,46.545,256,46.545S465.455,140.507,465.455,256S371.493,465.455,256,465.455z
+                                    			" />
+                                </g>
+                            </g>
+                        </svg></button>
+                </div>
+
+
+                <!-- Botón de próximo -->
+                <button id="next" class=" change">
+                    <svg width="70%" height="70%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"
+                            fill="#fff" />
+                    </svg>
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+
+<!--
+Activity 8 - Music Player - Sarah Soares - 2DAWT
+
+Seguí algunas partes de los tutoriales y instrucciones en estas páginas web y adapté a mi proyecto:
+- https://medium.com/@tommarren/create-a-custom-audio-progress-bar-using-javascript-51b358811abd
+- https://stackoverflow.com/questions/70957447/play-multiple-tracks-audio 
+- https://www.showwcase.com/article/36347/how-to-build-a-dynamic-music-app-using-javascript 
+- https://stackoverflow.com/questions/68306076/how-to-toggle-between-two-buttons
+
+Todas las canciones fueron producidas por mí, estan disponibles en https://soundcloud.com/sasowav
+
+Algunas imagenes de referencia para la creación visual del player: https://as1.ftcdn.net/v2/jpg/05/54/17/44/1000_F_554174440_yv0gHekWxKApu9IHw0qlLbmxs4DZywA8.jpg 
+
+otras herramientas utilizadas: 
+- https://cssgradient.io/
+- https://css.glass/
+
+
+Autora: https://github.com/scsoares
+-->

@@ -1,0 +1,140 @@
+﻿/* Importa la fuente SUSE desde google fonts */
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+
+body {
+  background: rgb(49, 45, 115);
+  background: linear-gradient(
+    52deg,
+    rgba(49, 45, 115, 1) 0%,
+    rgba(1, 1, 9, 1) 63%,
+    rgba(31, 0, 110, 1) 100%
+  );
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+svg > path {
+  color: #fff;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+#album-and-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#song-details {
+  max-height: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 400;
+}
+
+p {
+  text-align: center;
+  margin: 20px;
+}
+
+#song-details > #name {
+  font-size: 1.5rem;
+}
+
+#song-details > #artist {
+  margin-bottom: 0;
+}
+
+#player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0px;
+  margin: 0rem 2rem 10rem 2rem;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#controls {
+  max-height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  max-width: 70%;
+}
+
+/* Toggle de los botones de pause and play */
+.btn {
+  cursor: pointer;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* - */
+
+#song-timer {
+  color: #fff;
+}
+
+#progress-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#name,
+#artist {
+  padding: none;
+}
+
+#song-timer {
+  display: flex;
+}
+
+#cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+}
+
+#album-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.change {
+  cursor: pointer;
+}
